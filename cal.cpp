@@ -122,7 +122,8 @@ std::string cal::removePrecision(std::string converted) {
     while (converted[++index_of_point] != '.') {}
     for(int i = 0; i < index_of_point; i++)
         cpy += converted[i];
-    while (--reverse_traversal >= index_of_point && converted[reverse_traversal] == '0') {}
+    while (reverse_traversal >= index_of_point && converted[reverse_traversal - 1] == '0') 
+        reverse_traversal--;
     for (int i = 0; i < reverse_traversal - index_of_point; i++)
         cpy += converted[i + index_of_point];
     return cpy;
@@ -312,7 +313,7 @@ color::color() : reset("\u001b[0m"), cSize(16) {
     int code = 0;
     for (int i = 0; i < cSize; i++)
     {
-        if (code >= 8)
+        if (code == 8)
             code = 0;
         if (i < cSize / 2)
             c[i] = "\u001b[3" + std::to_string(code++) + "m";
@@ -322,7 +323,7 @@ color::color() : reset("\u001b[0m"), cSize(16) {
     code = 0;
     for (int i = 0; i < cSize; i++)
     {
-        if (code >= 8)
+        if (code == 8)
             code = 0;
         if (i < cSize / 2)
             bc[i] = "\u001b[4" + std::to_string(code++) + "m";
@@ -331,10 +332,8 @@ color::color() : reset("\u001b[0m"), cSize(16) {
     }
 }
 color::~color() {
-    if (!c)
-        delete[] c;
-    if (!bc)
-        delete[] bc;
+    delete[] c;
+    delete[] bc;
     c = nullptr;
     bc = nullptr;
 }
