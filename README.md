@@ -15,5 +15,7 @@ This program/calculator is made for fun. Code for this program may be messy and 
 
 Please do not judge :)
 
-######################### THIS PROGRAM IS LAME AND WACKED UP##############################
+
+
+######################### THIS PROGRAM IS LAME AND WACKED UP... I'll fix it when I get a chance##############################
 
