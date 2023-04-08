@@ -99,7 +99,6 @@ cal::cal(std::string user_input){
 }
 void cal::problemEdit(std::string converted, int starting_index, int ending_index) {
     std::string cpy = "";
-    
     for (unsigned int i = 0; i < problem.length(); i++)
     {
         if (i < starting_index - 1 || i > ending_index)
@@ -111,7 +110,6 @@ void cal::problemEdit(std::string converted, int starting_index, int ending_inde
             cpy += converted;
             i = ending_index;
         }
-        
     }
     problem = cpy;
 }
