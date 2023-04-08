@@ -89,7 +89,6 @@ cal::cal(std::string user_input){
         if (!oP)
             answer = removePrecision(std::to_string(num[0]));
         problemEdit(removePrecision(std::to_string(num[0])), starting_index, indexing);
-        std::cout << problem << std::endl;
         delete[] num;
         delete[] sym;
         if (!oP)
@@ -122,9 +121,9 @@ std::string cal::removePrecision(std::string converted) {
     while (converted[++index_of_point] != '.') {}
     for(int i = 0; i < index_of_point; i++)
         cpy += converted[i];
-    while (reverse_traversal >= index_of_point && converted[reverse_traversal - 1] == '0') 
+    while (reverse_traversal > index_of_point && converted[reverse_traversal - 1] == '0') 
         reverse_traversal--;
-    for (int i = 0; i < reverse_traversal - index_of_point; i++)
+    for (int i = reverse_traversal - index_of_point > 1 ? 0 : 1; i < reverse_traversal - index_of_point; i++)
         cpy += converted[i + index_of_point];
     return cpy;
 }
