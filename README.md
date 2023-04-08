@@ -1,6 +1,7 @@
 # Calculator-Animated-
 
-    Please Compile and run with "g++ main.cpp cal.cpp -std=c++17 && ./a.out"
+Please Compile and run with:
+    g++ main.cpp cal.cpp -std=c++17 && ./a.out
 This program uses ANSI escape code may NOT work with window command prompt.
 
 This Calculator ONLY works with basic math.
