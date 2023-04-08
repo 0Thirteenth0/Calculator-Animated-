@@ -11,8 +11,6 @@ Works with:
             d. Division(/)
             e. Exponential(^)
 
-This program/calculator is made for fun. Code for this program may be messy and ugly.
-
 ![Screen Recording 2023-04-08 at 2 23 22 PM-2](https://user-images.githubusercontent.com/95335912/230744688-93f55433-e8a9-435b-bf40-218a91ae5f9f.gif)
 
 
